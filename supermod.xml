@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<mod name="SaveGameDumper" image="icon.png"
+	description="Dumps your savegame (profile and character slot) as JSON to the saves folder when loaded"
+	author="BangL"
+	version="1.1"
+	min_sblt_version="2.0.0">
+	<updates>
+	    <update identifier="savegamedumper">
+	        <host meta="https://raw.githubusercontent.com/BangL/raid-mods-meta/main/savegamedumper.json"/>
+	    </update>
+	</updates>
+	<hooks>
+		<post hook_id="lib/managers/savefilemanager" script_path="SaveGameDumper.lua" />
+	</hooks>
+</mod>
