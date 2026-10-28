@@ -36,7 +36,7 @@ local function write_value(buffer, value, indent, seen, depth)
     if vtype == "string" then
         if not is_text(value) then
             -- binary strings are values stored via Application:digest_value(x, true)
-            local ok, decoded = pcall(Application.digest_value, Application, value, false)
+            local ok, decoded = blt.pcall(Application.digest_value, Application, value, false)
             if ok and type(decoded) == "number" then
                 return write_value(buffer, decoded, indent, seen, depth)
             end
@@ -133,7 +133,7 @@ Hooks:PostHook(SavefileManager, "_load_cache", "SaveGameDumper._load_cache", fun
     local cache = meta_data and meta_data.cache
 
     if cache then
-        local ok, err = pcall(SaveGameDumper.dump, slot, cache)
+        local ok, err = blt.pcall(SaveGameDumper.dump, slot, cache)
         if not ok then
             log("[SaveGameDumper] Dump failed: " .. tostring(err))
         end
