@@ -6,7 +6,7 @@
 	min_sblt_version="2.0.0">
 	<updates>
 	    <update identifier="savegamedumper">
-	        <host meta="https://raw.githubusercontent.com/BangL/raid-mods-meta/main/savegamedumper.json"/>
+	        <host meta="https://raw.githubusercontent.com/BangL/raid-mods-meta/main/savegamedumper.json" patchnotes="https://github.com/BangL/SaveGameDumper/blob/master/CHANGELOG.md"/>
 	    </update>
 	</updates>
 	<hooks>
